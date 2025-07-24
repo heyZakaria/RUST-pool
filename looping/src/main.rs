@@ -14,14 +14,15 @@ fn main()-> io::Result<()>{
         
         if input == answer.to_lowercase() {
             println!("Number of trials: {}",counter);
+            break ;
         }else{
             println!("{}",  riddle);
             counter += 1;
         }
         
-        // Ok(())
+        
     }
-    
+    Ok(())
 }
 
 #[cfg(test)]
