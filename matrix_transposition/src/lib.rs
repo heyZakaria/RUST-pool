@@ -1,7 +1,7 @@
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct Matrix(pub (i32, i32), pub (i32, i32));
 
-impl Matrix {
+/* impl Matrix {
     fn new(t1:i32, t2:i32) -> (i32, i32){
         (t1, t2)
     }
@@ -10,17 +10,18 @@ impl Matrix {
         Matrix(x, y)
     }   
 }
-impl PartialEq for Matrix {
+    */
+/* impl PartialEq for Matrix {
     fn eq(&self, y: &Self) -> bool{
-        self.0.1 == y.1.0
+        self.0.1 == y.1.0 && self.
     }
-}
+} 
 
 impl Eq for Matrix{}
-
+ */
 pub fn transpose(m: Matrix) -> Matrix {
-    
-    let m1 = Matrix::new(m.0.0, m.0.1);
+    return Matrix((m.0.0, m.1.0), (m.0.1, m.1.1));
+    /* let m1 = Matrix::new(m.0.0, m.0.1);
     let m2 = Matrix::new(m.1.0, m.1.1);
     
    
@@ -32,6 +33,6 @@ pub fn transpose(m: Matrix) -> Matrix {
     return hold
    
 
-    /* println!("{:?}, {:?}", m.0, m.1);
+    /* println!("{:?}, {:?}", m.0, m.1); */
     m */
 }
