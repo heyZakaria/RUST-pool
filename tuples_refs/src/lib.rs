@@ -1,16 +1,17 @@
-pub struct Student{
-    id:u32,
-    first_name:&str,
-    last_name:&str,
-}
+pub struct Student(
+    pub i32, pub String, pub String
+);
+
 pub fn id(student: &Student) -> u32 {
-    student.id
+    student.0.try_into().unwrap()
+    // OR
+    // student.0 as u32
 }
 
 pub fn first_name(student: &Student) -> &str {
-    student.first_name
+    &student.1
 }
 
 pub fn last_name(student: &Student) -> &str {
-    student.last_name
+    &student.2
 }
