@@ -1,6 +1,5 @@
-cargo-features = ["edition2024"]
 [package]
-name = "tuples_refs"
+name = "borrow"
 version = "0.1.0"
 edition = "2021"
 

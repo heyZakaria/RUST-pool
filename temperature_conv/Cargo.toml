@@ -1,3 +1,4 @@
+cargo-features = ["edition2024"]
 [package]
 name = "temperature_conv"
 version = "0.1.0"

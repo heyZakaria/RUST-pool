@@ -1,3 +1,4 @@
+cargo-features = ["edition2024"]
 [package]
 name = "looping"
 version = "0.1.0"
