@@ -5,20 +5,19 @@ fn main()-> io::Result<()>{
     let answer = "The letter e";
     let mut counter = 1;
 
-    println!("{}", riddle);
+    // println!("{}", riddle);
     loop {
+        println!("{}",  riddle);
         
         let mut input = String::new();
-        io::stdin().read_line(&mut input)?;
+        io::stdin().read_line(&mut input).expect("chi 7aja");
         let input = input.trim().to_lowercase();
         
         if input == answer.to_lowercase() {
-            println!("Number of trials: {}",counter);
+            println!("Number of trials: {counter}");
             break ;
-        }else{
-            println!("{}",  riddle);
-            counter += 1;
         }
+        counter += 1;
         
         
     }
