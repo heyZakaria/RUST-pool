@@ -1,9 +1,17 @@
 pub fn nbr_function(c: i32) -> (i32, f64, f64) {
-    let x: f64 = c.to_owned().into();
-
+    let mut check = false;
+    if c < 0 {
+        check = true;
+        
+    }
+    let mut x: f64 = c.to_owned().into();
     let e:f64 = x.exp();
-    let l: f64 = x.ln();
-
+    if x < 0.0{
+        x *= -1.0
+    }
+    let mut l: f64 = x.ln();
+    // println!("#######{}", l);
+   
     (c, e,  l  )
 }
 
@@ -33,7 +41,8 @@ pub fn vec_function(b: Vec<i32>) -> (Vec<i32>, Vec<f64>) {
    let mut res: Vec<f64> = vec![];
     for  v in &b {
         let x: f64 = v.to_owned().into();
-            let e:f64 = x.exp();
+        let e:f64 = x.ln();
+        // println!("***{}", e);
             res.push(e);
     }
     (b,res )
