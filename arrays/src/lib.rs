@@ -1,4 +1,4 @@
-pub fn sum(a: [i32; 10]) -> i32 {
+pub fn sum(a: &[i32]) -> i32 {
     a.iter().sum()
     
 }
