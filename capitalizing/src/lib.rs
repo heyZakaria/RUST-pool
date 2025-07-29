@@ -19,7 +19,7 @@ pub fn title_case(input: &str) -> String {
     for c in input.chars() {
         if c.is_whitespace() {
             new_word = true;
-            result.push(c); // نخلي نفس الـ whitespace
+            result.push(c); 
         } else if new_word {
             result.extend(c.to_uppercase());
             new_word = false;
