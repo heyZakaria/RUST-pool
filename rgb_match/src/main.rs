@@ -1,7 +1,7 @@
-use rgb_match::*;
+// use rgb_match::*;
 
 fn main() {
-    let c = Color {
+    /* let c = Color {
         r: 255,
         g: 200,
         b: 10,
@@ -22,5 +22,5 @@ fn main() {
     println!();
     println!("{:?}", c.swap(c.a, c.r));
     println!("{:?}", c.swap(c.a, c.b));
-    println!("{:?}", c.swap(c.a, c.g));
+    println!("{:?}", c.swap(c.a, c.g));  */
 }
