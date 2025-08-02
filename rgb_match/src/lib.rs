@@ -8,19 +8,35 @@ pub struct Color {
 
 impl Color {
     pub fn swap(mut self, first: u8, second: u8) -> Color {
-       
-        
-   /*      first = first ^ second;
-        second = first ^ second;
-        first = first ^ second; */
-        println!("***{:?} --- {} +++ {}", self, first, second);
-        
-
-        Color {
-            self: first,
-            self: second,
-            
+        if self.r == first {
+            self.r = second;
+        } else if self.r == second {
+            self.r = first;
         }
+
+        if self.g == first {
+            self.g = second;
+        } else if self.g == second {
+            self.g = first;
+        }
+
+        if self.b == first {
+            self.b = second;
+        } else if self.b == second {
+            self.b = first;
+        }
+
+        if self.a == first {
+            self.a = second;
+        } else if self.a == second {
+            self.a = first;
+        }
+
+        self
     }
 }
+
+
+
+
  
