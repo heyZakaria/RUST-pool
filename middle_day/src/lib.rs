@@ -1,8 +1,8 @@
 use chrono::{Datelike, NaiveDate, Weekday};
 
-fn middle_day(year: i32) -> Option<Weekday> {
+pub fn middle_day(year: i32) -> Option<Weekday> {
 
-    let is_leap = chrono::naive::is_leap_year(year);
+    let is_leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
     if is_leap {
         return None;
