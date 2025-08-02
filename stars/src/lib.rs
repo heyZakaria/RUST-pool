@@ -1,3 +1,3 @@
 pub fn stars(n: u32) -> String {
-    "*".repeat(2^n)
+    "*".repeat(2_i32.pow(n) as usize)
 }
