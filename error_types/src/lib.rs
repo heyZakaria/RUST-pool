@@ -2,17 +2,17 @@ pub use chrono::Utc;
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct FormError {
-    pub form_values: (String, String),
+    pub form_values: (&'static str, String),
     pub date: String,
-    pub err: String,
+    pub err: &'static str,
 }
 
 impl FormError {
-    pub fn new(field_name: &str, field_value: &str, err: &str) -> Self {
+    pub fn new(field_name: &'static str, field_value: &str, err: &'static str) -> Self {
         Self {
-            form_values: (field_name.to_string(), field_value.to_string()),
+            form_values: (field_name, field_value.to_string()),
             date: Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(),
-            err: err.to_string(),
+            err: err,
         }
     }
 }
