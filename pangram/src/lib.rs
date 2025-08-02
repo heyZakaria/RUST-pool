@@ -5,9 +5,8 @@ pub fn is_pangram(s: &str) -> bool {
 
     for c in s.chars() {
         if c.is_alphabetic(){
-            let _ = c.to_lowercase();
-
-            x.insert(c);
+           let r = c.to_lowercase();
+            x.insert(r);
         }
     }
    if x.len() == 26{
