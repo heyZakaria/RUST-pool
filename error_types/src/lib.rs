@@ -1,4 +1,4 @@
-use chrono::Utc;
+pub use chrono::Utc;
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct FormError {
@@ -36,7 +36,7 @@ impl Form {
         if self.password.len() < 8 {
             return Err(FormError::new(
                 "password",
-                &self.password,
+                &self.password.clone(),
                 "Password should be at least 8 characters long",
             ));
         }
@@ -58,7 +58,7 @@ impl Form {
         if !(has_alpha && has_numeric && has_symbol) {
             return Err(FormError::new(
                 "password",
-                &self.password,
+                &self.password.clone(),
                 "Password should be a combination of ASCII numbers, letters and symbols",
             ));
         }
