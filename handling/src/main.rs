@@ -1,4 +1,4 @@
-// use std::{fs, io::Write};
+use std::{fs, io::Write};
 use tempfile::NamedTempFile;
 
 #[test]

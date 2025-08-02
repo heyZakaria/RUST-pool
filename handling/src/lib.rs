@@ -1,7 +1,7 @@
 use std::path::Path;
 use std::fs::{File, OpenOptions};
 use std::io::{ErrorKind };
-// use std::io::Write;
+use std::io::Write;
 
 pub fn open_or_create<P: AsRef<Path>>(path: &P, content: &str) {
     match OpenOptions::new().read(true).write(true).append(true).create(true).open(path) {
